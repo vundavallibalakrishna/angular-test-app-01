@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="column" *ngFor="let label of labels">
+      <button
+        type="button"
+        [ngClass]="{ selected: label.priority > 0 }"
+        class="btn btn-primary"
+        (click)="setPriority(label)"
+      >
+        {{ label.title }}&nbsp;<span class="help">i</span>
+        <span class="badge badge-light">{{ label.priority }}</span>
+      </button>
+    </div>
+  </div>
+</div>
